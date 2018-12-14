@@ -26,6 +26,7 @@ servidor2 = [9.5] * 5 + [10] * 4 + [10.5] * 15 + [11] * 16 + [11.5] * 23 + [12] 
 
 class Server(object):
     def __init__(self, env, num_servers):
+        print "init"
         self.env = env
         self.machine = simpy.Resource(env, num_servers)
         self.serverTime = 1
